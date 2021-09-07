@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapShow">
+
+    <Spinner
+        android:id="@+id/floorList"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"/>
+
+    <EditText
+        android:id="@+id/searchInput"
+        android:layout_width="190dp"
+        android:layout_height="70dp"
+        android:layout_toEndOf="@id/floorList"/>
+
+    <Button
+        android:id="@+id/objectSearch"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_toEndOf="@id/searchInput"
+        android:text="@string/search"/>
+
+
+    <com.example.easymap.views.CustomView
+        android:id="@+id/customView"
+        android:layout_width="wrap_content"
+        android:layout_height="550dp"
+        android:layout_below="@id/objectSearch"/>
+
+    <Button
+        android:id="@+id/calibrateMode"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/customView"
+        android:text="CAL"/>
+
+    <Button
+        android:id="@+id/find_me"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/customView"
+        android:layout_marginLeft="30dp"
+        android:layout_toEndOf="@id/calibrateMode"
+        android:text="Find Me"/>
+
+</RelativeLayout>
+
